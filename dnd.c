@@ -5,15 +5,30 @@
 
 
 #define RACE_LIST(X) \
-    X(ELF,   "Elf")   \
-    X(HUMAN, "Human") \
-    X(ORC,   "Orc")   \
-    X(DWARF, "Dwarf")
+    X(HUMAN,       "Human")      \
+    X(ELF,         "Elf")        \
+    X(DWARF,       "Dwarf")      \
+    X(HALFLING,    "Halfling")   \
+    X(ORC,         "Orc")        \
+    X(GNOME,       "Gnome")      \
+    X(DRAGONBORN,  "Dragonborn") \
+    X(TIEFLING,    "Tiefling")   \
+    X(HALF_ELF,    "Half-Elf")   \
+    X(HALF_ORC,    "Half-Orc")
 
 #define CLASS_LIST(X) \
-    X(MONK,  "Monk")  \
-    X(BARD,  "Bard")  \
-    X(ROGUE, "Rogue")
+    X(BARBARIAN,   "Barbarian") \
+    X(BARD,        "Bard")      \
+    X(CLERIC,      "Cleric")    \
+    X(DRUID,       "Druid")     \
+    X(FIGHTER,     "Fighter")   \
+    X(MONK,        "Monk")      \
+    X(PALADIN,     "Paladin")   \
+    X(RANGER,      "Ranger")    \
+    X(ROGUE,       "Rogue")     \
+    X(SORCERER,    "Sorcerer")  \
+    X(WARLOCK,     "Warlock")   \
+    X(WIZARD,      "Wizard")
 
 #define ALIGNMENT_LIST(X) \
     X(LAWFUL_GOOD,     "Lawful Good")    \
@@ -156,7 +171,6 @@ int select_option(const char* name, const char* options[], int count)
         }
     }
 
-    // Return the index (0, 1, 2...) which matches our Enum values!
     return choice - 1;
 }
 
